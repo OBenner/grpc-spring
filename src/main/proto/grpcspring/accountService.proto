@@ -1,0 +1,26 @@
+syntax = "proto3";
+package grpcspring;
+//option java_package = "com.obenner.grpcspring";
+//option java_outer_classname = "AccServiceProto";
+option java_multiple_files = true;
+
+message Account {
+    string firstName = 1;
+    string lastName = 2;
+    int32 phone = 3;
+}
+
+message GetAccRequest{
+    string phone=1;
+}
+
+message CreateAccResponse{
+    string status=1;
+}
+
+
+service AccountService{
+    rpc GetAcc(GetAccRequest) returns (Account){};
+    rpc CreateAcc(Account) returns (CreateAccResponse){};
+}
+
