@@ -57,7 +57,7 @@ public class Config {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("ru.neoflex.vtb.bq.pilot.pilot.web"))
+                .apis(RequestHandlerSelectors.basePackage(""))
                 .paths(PathSelectors.any())
                 .build().apiInfo(apiInfo()).useDefaultResponseMessages(false);
     }
